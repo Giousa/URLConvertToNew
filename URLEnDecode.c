@@ -1,4 +1,5 @@
 #include "URLEnDecode.h"
+#include <string.h>
 
 int hex2dec(char c) {
     if ('0' <= c && c <= '9') {
