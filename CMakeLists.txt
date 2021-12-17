@@ -3,4 +3,4 @@ project(URLConvertToNew C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(URLConvertToNew main.c URLEnDecode.h URLEnDecode.c utils.h utils.c)
+add_executable(URLConvertToNew main.c URLEnDecode.h URLEnDecode.c utils.h utils.c BuildURL.h BuildURL.c)

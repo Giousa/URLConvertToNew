@@ -90,6 +90,12 @@ build CMakeFiles/URLConvertToNew.dir/utils.c.o: C_COMPILER__URLConvertToNew_Debu
   OBJECT_DIR = CMakeFiles/URLConvertToNew.dir
   OBJECT_FILE_DIR = CMakeFiles/URLConvertToNew.dir
 
+build CMakeFiles/URLConvertToNew.dir/BuildURL.c.o: C_COMPILER__URLConvertToNew_Debug /Users/zhangmengmeng/workspace/cproject/URLConvertToNew/BuildURL.c || cmake_object_order_depends_target_URLConvertToNew
+  DEP_FILE = CMakeFiles/URLConvertToNew.dir/BuildURL.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk -mmacosx-version-min=11.2 -std=gnu99
+  OBJECT_DIR = CMakeFiles/URLConvertToNew.dir
+  OBJECT_FILE_DIR = CMakeFiles/URLConvertToNew.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target URLConvertToNew
@@ -98,7 +104,7 @@ build CMakeFiles/URLConvertToNew.dir/utils.c.o: C_COMPILER__URLConvertToNew_Debu
 #############################################
 # Link the executable URLConvertToNew
 
-build URLConvertToNew: C_EXECUTABLE_LINKER__URLConvertToNew_Debug CMakeFiles/URLConvertToNew.dir/main.c.o CMakeFiles/URLConvertToNew.dir/URLEnDecode.c.o CMakeFiles/URLConvertToNew.dir/utils.c.o
+build URLConvertToNew: C_EXECUTABLE_LINKER__URLConvertToNew_Debug CMakeFiles/URLConvertToNew.dir/main.c.o CMakeFiles/URLConvertToNew.dir/URLEnDecode.c.o CMakeFiles/URLConvertToNew.dir/utils.c.o CMakeFiles/URLConvertToNew.dir/BuildURL.c.o
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk -mmacosx-version-min=11.2
   OBJECT_DIR = CMakeFiles/URLConvertToNew.dir
   POST_BUILD = :

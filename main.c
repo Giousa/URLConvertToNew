@@ -2,7 +2,10 @@
 #include <string.h>
 #include "URLEnDecode.h"
 #include "utils.h"
+#include "BuildURL.h"
 
+
+void buildNewURL(int argc, char *argv[]);
 
 /**
  * https://h5.shantaijk.cn/health_report/#/collect?bizType=CONSULT_ORDER_ID&bizId={consultOrderId}
@@ -11,6 +14,18 @@
  * @return
  */
 int main(int argc, char *argv[]) {
+    if (argc <= 1) {
+        printf("参数为空，生成失败！\n");
+        return 0;
+    }
+//    buildNewURL(argv,argv);
+    buildKVUrl(argc, argv);
+//    buildLinksUrl(argc, argv);
+
+    return 0;
+}
+
+void buildNewURL(int argc, char *argv[]) {
 
 //    printf("argc num: %d\n", argc);
 
@@ -20,7 +35,7 @@ int main(int argc, char *argv[]) {
 
     if (argc <= 1) {
         printf("参数为空，生成失败！\n");
-        return -1;
+        return;
     }
 
 //    char *url = argv[1];
@@ -69,5 +84,4 @@ int main(int argc, char *argv[]) {
     printf("小程序链接： %s\n", xcxUrl);
     printf("微信链接： %s\n", wxUrl);
 
-    return 0;
 }
