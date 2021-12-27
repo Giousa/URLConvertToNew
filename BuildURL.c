@@ -73,10 +73,10 @@ void buildLinksUrl(int argc, char *argv[]) {
             char *res;
             if (i == 2) {
                 h5Res = strAppend(5, "?", argv[i], "=${", argv[i], "}");
-                res = strAppend(5, "%3F", argv[i], "%3D%24{", argv[i], "}");
+                res = strAppend(5, "%3F", argv[i], "%3D${", argv[i], "}");
             } else {
                 h5Res = strAppend(5, "&", argv[i], "=${", argv[i], "}");
-                res = strAppend(5, "%26", argv[i], "%3D%24{", argv[i], "}");
+                res = strAppend(5, "%26", argv[i], "%3D${", argv[i], "}");
             }
             strcat(suffix, res);
             strcat(h5Suffix, h5Res);
