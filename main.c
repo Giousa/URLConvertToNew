@@ -14,13 +14,13 @@ void buildNewURL(int argc, char *argv[]);
  * @return
  */
 int main(int argc, char *argv[]) {
-    if (argc <= 1) {
-        printf("参数为空，生成失败！\n");
-        return 0;
-    }
-//    buildNewURL(argv,argv);
-    buildKVUrl(argc, argv);
-//    buildLinksUrl(argc, argv);
+//    if (argc <= 1) {
+//        printf("参数为空，生成失败！\n");
+//        return 0;
+//    }
+//    buildNewURL(argc,argv);
+//    buildKVUrl(argc, argv);
+    buildLinksUrl(argc, argv);
 
     return 0;
 }
@@ -29,18 +29,17 @@ void buildNewURL(int argc, char *argv[]) {
 
 //    printf("argc num: %d\n", argc);
 
-    argc = 4;
-    argv[2] = "consultOrderId";
-    argv[3] = "userId";
+//    argc = 4;
+//    argv[2] = "consultOrderId";
+//    argv[3] = "userId";
 
     if (argc <= 1) {
         printf("参数为空，生成失败！\n");
         return;
     }
 
-//    char *url = argv[1];
-
-    char url[] = "https://h5.shantaijk.cn/health_report/#/collect";
+    char *url = argv[1];
+//    char url[] = "https://h5.shantaijk.cn/health_report/#/collect";
     printf("初始URL: %s\n", url);
 
     char h5Suffix[1024];

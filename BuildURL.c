@@ -1,16 +1,11 @@
 #include "BuildURL.h"
 #include "utils.h"
 
-void buildKVUrl(int argc, char *argd[]) {
+void buildKVUrl(int argc, char *argv[]) {
 
     if (argc <= 1) {
         printf("参数为空，生成失败！\n");
         return;
-    }
-
-    char *argv[1024];
-    for (int i = 0; i < argc; ++i) {
-        argv[i] = argd[i];
     }
 
     char *url = argv[1];
@@ -58,19 +53,15 @@ void buildKVUrl(int argc, char *argd[]) {
     printf("KV 微信链接： %s\n", wxUrl);
 }
 
-void buildLinksUrl(int argc, char *argd[]) {
+void buildLinksUrl(int argc, char *argv[]) {
 
     if (argc <= 1) {
         printf("参数为空，生成失败！\n");
         return;
     }
 
-    char *argv[1024];
-    for (int i = 0; i < argc; ++i) {
-        argv[i] = argd[i];
-    }
-
     char *url = argv[1];
+//    char url[] = "https://h5.shantaijk.cn/health_report/#/collect";
     printf("初始URL: %s\n", url);
 
     char h5Suffix[1024];
@@ -81,11 +72,11 @@ void buildLinksUrl(int argc, char *argd[]) {
             char *h5Res;
             char *res;
             if (i == 2) {
-                h5Res = strAppend(5, "?", argv[i], "={", argv[i], "}");
-                res = strAppend(5, "%3F", argv[i], "%3D{", argv[i], "}");
+                h5Res = strAppend(5, "?", argv[i], "=${", argv[i], "}");
+                res = strAppend(5, "%3F", argv[i], "%3D%24{", argv[i], "}");
             } else {
-                h5Res = strAppend(5, "&", argv[i], "={", argv[i], "}");
-                res = strAppend(5, "%26", argv[i], "%3D{", argv[i], "}");
+                h5Res = strAppend(5, "&", argv[i], "=${", argv[i], "}");
+                res = strAppend(5, "%26", argv[i], "%3D%24{", argv[i], "}");
             }
             strcat(suffix, res);
             strcat(h5Suffix, h5Res);
